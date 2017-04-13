@@ -1,51 +1,30 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style src="css/styles.css" media="screen" rel="stylesheet"></style>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <title>Bootstrap Example</title>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <style media="screen">
-    .table-hover>tbody>tr>td:hover, .table-hover>tbody>tr>td:hover{
-            background-color: red!important;
-        }
-        .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th{
-            background-color: inherit;
-        }
-    </style>
-    <script type="text/javascript">
-      $(function (){
-        var ionianhover = $('.ionian');
-        var ionianaudio = ionianhover.find('audio')[0];
+    <script src="js/script.js" type="text/javascript"></script>
 
-        ionianhover.hover(function(){
-          ionianaudio.play();
-        }, function (){
-          ionianaudio.stop();
-        });
-      });
-    </script>
   </head>
   <body>
 
-    <div class="container-fluid">
-      <div class="jumbotron">
-        <h1>Modes</h1>
-        <p></p>
-      </div>
-
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <h1>Modes</h1>
+      <p></p>
     </div>
 
-  <div class="table-responsive">
-    <table class="table-hover table-condensed table-bordered table-striped">
+    <table class="table table-sm table-striped table-responsive table-bordered">
       <thead>
         <tr>
-          <th>Number</th>
-          <th>Major Scale</th>
+          <th scope="row">#</th>
+          <th>Major</th>
           <th>1</th>
           <th>b2</th>
           <th>2</th>
@@ -71,12 +50,11 @@
           <th>b7</th>
           <th>7</th>
         </tr>
-
       </thead>
       <tbody>
-        <tr class="success">
-          <td>I</td>
-          <td class="ionian"><audio src="sounds/ionian.mp3" preload="auto"></audio>Ionian</td>
+        <tr>
+          <th scope="row">I</th>
+          <th class="ionian"><audio src="sounds/ionian.mp3" preload="auto"></audio>Ionian</th>
           <td>1</td>
           <td></td>
           <td>2</td>
@@ -103,8 +81,8 @@
           <td></td>
         </tr>
         <tr>
-          <td>II</td>
-          <td>Dorian</td>
+          <th class="row">II</th>
+          <th>Dorian</th>
           <td></td>
           <td></td>
           <td>1</td>
@@ -131,8 +109,8 @@
           <td></td>
         </tr>
         <tr>
-          <td>III</td>
-          <td>Phrygian</td>
+          <th class="row">III</th>
+          <th>Phrygian</th>
           <td></td>
           <td></td>
           <td></td>
@@ -159,8 +137,8 @@
           <td></td>
         </tr>
         <tr>
-          <td>IV</td>
-          <td>Lydian</td>
+          <th class="row">IV</th>
+          <th>Lydian</th>
           <td></td>
           <td></td>
           <td></td>
@@ -187,8 +165,8 @@
           <td></td>
         </tr>
         <tr>
-          <td>V</td>
-          <td>Mixolydian</td>
+          <th class="row">V</th>
+          <th>Mixolydian</th>
           <td></td>
           <td></td>
           <td></td>
@@ -215,8 +193,8 @@
           <td></td>
         </tr>
         <tr>
-          <td>VI</td>
-          <td>Aeolian</td>
+          <th class="row">VI</th>
+          <th>Aeolian</th>
           <td></td>
           <td></td>
           <td></td>
@@ -243,8 +221,8 @@
           <td></td>
         </tr>
         <tr>
-          <td>VII</td>
-          <td>Locrian</td>
+          <th class="row">VII</th>
+          <th>Locrian</th>
           <td></td>
           <td></td>
           <td></td>
@@ -272,143 +250,6 @@
         </tr>
       </tbody>
     </table>
-
-    <table class="table-hover table-condensed table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Number</th>
-          <th>Major Scale</th>
-          <th>1</th>
-          <th>b2</th>
-          <th>2</th>
-          <th>b3</th>
-          <th>3</th>
-          <th>4</th>
-          <th>tri</th>
-          <th>5</th>
-          <th>b6</th>
-          <th>6</th>
-          <th>b7</th>
-          <th>7</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="success">
-          <td>I</td>
-          <td>Ionian</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-        </tr>
-        <tr>
-          <td>II</td>
-          <td>Dorian</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>III</td>
-          <td>Phrygian</td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>IV</td>
-          <td>Lydian</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-        </tr>
-        <tr>
-          <td>V</td>
-          <td>Mixolydian</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>VI</td>
-          <td>Aeolian</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>VII</td>
-          <td>Locrian</td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-          <td> &#x2713;</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
   </div>
-
-
   </body>
 </html>
