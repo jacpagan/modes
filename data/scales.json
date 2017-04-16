@@ -1,0 +1,37 @@
+{"major" : [
+{
+    "number": "I",
+    "name": "Ionian",
+    "notes": ["1", "2", "3", "4", "5", "6", "7"]
+},
+{
+  "number": "II",
+  "name": "Dorian",
+  "notes": ["1", "2", "b3", "4", "5", "6", "b7"]
+},
+{
+  "number": "III",
+  "name": "Phrygian",
+  "notes": ["1", "b2", "b3", "4", "5", "b6", "b7"]
+},
+{
+    "number": "IV",
+    "name": "Lydian",
+    "notes": ["1", "2", "3", "#4", "5", "6", "7"]
+},
+{
+    "number": "V",
+    "name": "Mixolydian",
+    "notes": ["1", "2", "3", "4", "5", "6", "b7"]
+},
+{
+    "number": "VI",
+    "name": "Aeolian",
+    "notes": ["1", "2", "b3", "4", "5", "b6", "b7"]
+},
+{
+    "number": "VII",
+    "name": "Locrian",
+    "notes": ["1", "b2", "b3", "4", "b5", "b6", "b7"]
+}
+]}
