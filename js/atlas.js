@@ -27,10 +27,11 @@ async function play(name,formula,arp,continuation=false){
  const timing=playbackTiming(),now=continuation?Math.max(ctx.currentTime+.005,nextAudioTime):ctx.currentTime+.03;
  nextAudioTime=now+(arp?notes.length*timing.step:timing.chord);scheduleAuto();
  status.textContent=`Hearing ${keys[keyIndex][0]} ${name}`;
- notes.forEach((note,i)=>{const o=ctx.createOscillator(),g=ctx.createGain(),t=now+(arp?i*timing.step:0),duration=arp?timing.note:timing.chord;
+ notes.forEach((note,i)=>{const o=ctx.createOscillator(),g=ctx.createGain(),t=now+(arp?i*timing.step:0),duration=arp?timing.step:timing.chord;
  o.type=document.querySelector('#voice').value;o.frequency.value=130.81278265*2**((keys[keyIndex][1]+note.p)/12);
- g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(Number(document.querySelector('#volume').value)/Math.sqrt(notes.length),t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+duration);
- o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+duration+.03);nodes.push(o);o.onended=()=>{o.disconnect();g.disconnect();nodes=nodes.filter(n=>n!==o)};
+ const level=Number(document.querySelector('#volume').value)/Math.sqrt(notes.length),release=.04;
+ g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(level,t+.008);g.gain.setValueAtTime(level,t+duration);g.gain.linearRampToValueAtTime(0,t+duration+release);
+ o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+duration+release+.01);nodes.push(o);o.onended=()=>{o.disconnect();g.disconnect();nodes=nodes.filter(n=>n!==o)};
  const timer=setTimeout(()=>{timers=timers.filter(id=>id!==timer);document.querySelectorAll('.sounding').forEach(el=>el.classList.remove('sounding'));const selected=document.querySelector('tr.selected');if(!selected)return;const tones=selected.querySelectorAll('[data-tone]');if(arp){const tone=tones[i%tones.length];if(tone)tone.classList.add('sounding')}else tones.forEach(tone=>tone.classList.add('sounding'))},Math.max(0,(t-ctx.currentTime)*1000));timers.push(timer);
  });
  }catch(e){stopAuto();status.textContent='Audio could not start: '+e.message}
