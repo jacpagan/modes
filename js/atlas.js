@@ -65,7 +65,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAuto()
 document.querySelector('#auto-mode').addEventListener('change',()=>{sweepOctave=sweepActive()?Number(document.querySelector('#sweep-range').value.split(',')[0]):0;inversion=0;if(selectedIndex>=0)selectRow(selectedIndex);else render();scheduleAuto()});
 document.querySelector('#sweep-range').onchange=()=>{sweepOctave=Number(document.querySelector('#sweep-range').value.split(',')[0]);inversion=0;if(sweepActive()){selectRow(Math.max(0,selectedIndex));scheduleAuto()}};
 
-function syncControls(){const isScale=mode==='scales',sweep=sweepActive();document.querySelector('#play-style').hidden=isScale||sweep;document.querySelector('#sweep-range').hidden=!sweep;for(const option of document.querySelector('#auto-mode').options)option.disabled=isScale&&['inversions','keyboard'].includes(option.value)}
+function syncControls(){const isScale=mode==='scales',sweep=sweepActive();document.querySelector('#practice-selection').hidden=!isScale;document.querySelector('#play-style').hidden=isScale||sweep;document.querySelector('#sweep-range').hidden=!sweep;for(const option of document.querySelector('#auto-mode').options)option.disabled=isScale&&['inversions','keyboard'].includes(option.value)}
 for(const id of ['chords','scales','auto-mode'])document.querySelector('#'+id).addEventListener(id==='auto-mode'?'change':'click',()=>{if(mode==='scales'&&['inversions','keyboard'].includes(document.querySelector('#auto-mode').value)){document.querySelector('#auto-mode').value='loop';sweepOctave=0}syncControls()});syncControls();
 
 
