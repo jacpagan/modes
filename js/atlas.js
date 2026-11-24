@@ -82,8 +82,7 @@ function queueInversion(value){if(mode!=='chords')return;const index=queuedIndex
 // Enter confirms a queued position even while its selector has focus.
 document.querySelector('#inversion').addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();commitQueue()}});
 
-document.querySelector('#sound-slot').append(document.querySelector('#sound-toggle'));
-document.querySelector('#position-slot').append(document.querySelector('#inversion').parentElement);
+
 function updateDock(){const playing=selectedIndex>=0;document.querySelector('#playing-label').textContent=playing?(soundEnabled&&autoRunning?'PLAYING':'PAUSED'):'READY TO LISTEN';const label=index=>{const [name]=currentRows()[index];return keys[keyIndex][0]+' '+(mode==='chords'?(names[name]||name):name)};document.querySelector('#playing-name').textContent=playing?label(selectedIndex)+(mode==='chords'?' · '+inversionName(inversion):''):'Tap any chord or scale';const queued=queuedIndex>=0;document.querySelector('#cue-name').textContent=queued?label(queuedIndex):'Choose a row while listening';document.querySelector('#cue-notes').textContent=queued?(mode==='chords'?voicing(currentRows()[queuedIndex][1],queuedInversion).map(voicedNote).join(' · '):currentRows()[queuedIndex][1].split(' ').map(note).join(' · ')):'';document.querySelector('#bring-in').disabled=!queued||queueCommitted;document.querySelector('#bring-in').textContent=queueCommitted?'Coming in…':'Bring in';document.querySelector('#clear-cue').hidden=!queued;for(const id of ['previous-inversion','next-inversion'])document.querySelector('#'+id).hidden=mode==='scales'}
 document.querySelector('#bring-in').onclick=commitQueue;
 document.querySelector('#clear-cue').onclick=()=>{queuedIndex=-1;queueCommitted=false;render()};
@@ -93,3 +92,6 @@ document.querySelector('#next-inversion').onclick=()=>stepQueuedInversion(1);
 document.querySelector('#sound-toggle').addEventListener('click',updateDock);
 document.addEventListener('keydown',event=>{if(event.code==='Space'||event.key==='Escape')updateDock()});
 updateDock();
+
+function syncPhoneLayout(){const phone=window.matchMedia('(max-width: 600px)').matches;const sound=document.querySelector('#sound-toggle'),position=document.querySelector('#inversion').parentElement;document.querySelector(phone?'#sound-slot':'nav').append(sound);document.querySelector(phone?'#position-slot':'nav').append(position);document.querySelector('#queue').hidden=phone;document.querySelector('#lesson').hidden=phone;const intro=document.querySelector('.intro');intro.textContent=phone?'Tap a sound. Cue the next. Bring it in.':'Choose a sound to listen. Browse the next while it loops; Enter brings it in.';sound.setAttribute('aria-label',soundEnabled?'Pause sound':'Resume sound')}
+if(typeof window!=='undefined'){syncPhoneLayout();window.matchMedia('(max-width: 600px)').addEventListener('change',syncPhoneLayout);document.querySelector('#sound-toggle').addEventListener('click',syncPhoneLayout)}
