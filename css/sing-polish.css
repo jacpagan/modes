@@ -49,3 +49,5 @@ body.singing{background:#101713;color:#e4eee5}
 #call-options>summary{display:none}
 #call-options:not([open]){display:none}
 #call-options[open]{display:block}
+
+#sing-shortcut-help{margin:18px auto 0;max-width:540px;text-align:left;font-size:12px}#sing-shortcut-help summary{color:#a3b99d;text-align:center}#sing-shortcut-help div{line-height:2.6;padding:12px}#sing-shortcut-help p{font-size:11px}kbd{font:11px system-ui;background:#233b29;border:1px solid #4a6649;border-radius:5px;padding:3px 6px;color:#d3edb2;margin:0 4px 0 8px}
