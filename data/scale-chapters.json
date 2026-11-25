@@ -32,7 +32,8 @@
         "Locrian",
         "1 b2 b3 4 b5 b6 b7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Melodic minor",
@@ -67,7 +68,8 @@
         "Super Locrian",
         "1 b2 b3 b4 b5 b6 b7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Harmonic minor",
@@ -102,7 +104,8 @@
         "ALT 𝄫7",
         "1 b2 b3 b4 b5 b6 bb7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Harmonic major",
@@ -137,7 +140,8 @@
         "Locrian 𝄫7",
         "1 b2 b3 4 b5 b6 bb7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Hungarian minor",
@@ -172,7 +176,8 @@
         "ALT ♮5 𝄫7",
         "1 b2 b3 b4 5 b6 bb7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Hungarian major",
@@ -207,7 +212,8 @@
         "Lydian augmented ♯3",
         "1 2 #3 #4 #5 6 7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Neapolitan minor",
@@ -242,7 +248,8 @@
         "ALT 𝄫3 𝄫7",
         "1 b2 bb3 b4 b5 b6 bb7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Neapolitan major",
@@ -277,7 +284,8 @@
         "ALT 𝄫3",
         "1 b2 bb3 b4 b5 b6 b7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Enigmatic minor",
@@ -312,7 +320,8 @@
         "Mode 7",
         "1 b2 bb3 b4 5 b6 7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Enigmatic",
@@ -347,7 +356,8 @@
         "Mode 7",
         "1 b2 bb3 4 5 6 7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Composite II",
@@ -382,7 +392,8 @@
         "Mode 7",
         "1 b2 bb3 4 5 b6 bb7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Ionian ♭5",
@@ -417,7 +428,8 @@
         "Locrian 𝄫6",
         "1 b2 b3 4 b5 bb6 b7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Locrian ♮7",
@@ -452,7 +464,8 @@
         "ALT ALT",
         "1 b2 bb3 b4 b5 bb6 bb7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
     "title": "Persian",
@@ -487,10 +500,11 @@
         "Mode 7",
         "1 b2 bb3 4 b5 bb6 bb7"
       ]
-    ]
+    ],
+    "section": "7-tone scales"
   },
   {
-    "title": "Pentatonic",
+    "title": "Minor pentatonic (blues scale)",
     "page": 149,
     "image": "IMG_3929.HEIC",
     "rows": [
@@ -514,7 +528,8 @@
         "Mode 5",
         "1 2 4 5 6"
       ]
-    ]
+    ],
+    "section": "5-tone scales"
   },
   {
     "title": "Kumoi",
@@ -541,15 +556,16 @@
         "Mode 5",
         "1 b3 4 b5 b7"
       ]
-    ]
+    ],
+    "section": "5-tone scales"
   },
   {
-    "title": "Hirajoshi",
+    "title": "Hirojoshi",
     "page": 163,
     "image": "IMG_3943 2.HEIC",
     "rows": [
       [
-        "Hirajoshi",
+        "Hirojoshi",
         "1 2 b3 5 b6"
       ],
       [
@@ -568,7 +584,8 @@
         "Mode 5",
         "1 3 #4 5 7"
       ]
-    ]
+    ],
+    "section": "5-tone scales"
   },
   {
     "title": "Whole tone",
@@ -599,7 +616,8 @@
         "Whole tone VI",
         "1 2 3 #4 #5 #6"
       ]
-    ]
+    ],
+    "section": "6-tone scales"
   },
   {
     "title": "Augmented",
@@ -630,7 +648,8 @@
         "Mode 2 · VI",
         "1 b2 3 4 #5 6"
       ]
-    ]
+    ],
+    "section": "6-tone scales"
   },
   {
     "title": "Dominant sus",
@@ -661,7 +680,8 @@
         "Mode 6",
         "1 2 3 5 6 7"
       ]
-    ]
+    ],
+    "section": "6-tone scales"
   },
   {
     "title": "Diminished",
@@ -700,7 +720,8 @@
         "Half–whole VIII",
         "1 b2 b3 3 #4 5 6 b7"
       ]
-    ]
+    ],
+    "section": "8-tone scales"
   },
   {
     "title": "8-tone Spanish",
@@ -739,7 +760,8 @@
         "Mode 8",
         "1 2 b3 4 b5 5 b6 b7"
       ]
-    ]
+    ],
+    "section": "8-tone scales"
   },
   {
     "title": "Bebop Locrian ♮2",
@@ -778,7 +800,8 @@
         "Mode 8",
         "1 b2 b3 3 #4 5 6 7"
       ]
-    ]
+    ],
+    "section": "8-tone scales"
   },
   {
     "title": "Bebop dominant",
@@ -817,7 +840,8 @@
         "Mode 8",
         "1 b2 b3 4 b5 b6 b7 7"
       ]
-    ]
+    ],
+    "section": "8-tone scales"
   },
   {
     "title": "Bebop Dorian",
@@ -856,7 +880,8 @@
         "Mode 8",
         "1 b2 b3 3 #4 #5 #6 7"
       ]
-    ]
+    ],
+    "section": "8-tone scales"
   },
   {
     "title": "Bebop major",
@@ -895,6 +920,7 @@
         "Mode 8",
         "1 b2 b3 4 b5 b6 6 b7"
       ]
-    ]
+    ],
+    "section": "8-tone scales"
   }
 ]
