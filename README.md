@@ -3,7 +3,7 @@
 Interactive chords and scales in all 12 keys. Open `index.html` locally or visit https://jacpagan.github.io/modes/.
 
 - 62 chord formulas, compact inversions, and arpeggio keyboard sweeps.
-- 149 scale/mode rows from 21 photographed charts, shown consecutively by chapter.
+- 179 scale/mode rows from 26 photographed charts, shown consecutively by chapter.
 - Click a row to listen; ↑/↓ browse, ←/→ change inversion, Space pauses/resumes, Esc stops.
 - Play/Stop supports loops, inversion cycling, keyboard sweeps, and automatic browsing. Options contains tone, volume, and sweep range.
 
