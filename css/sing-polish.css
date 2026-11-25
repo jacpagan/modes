@@ -1,0 +1,46 @@
+/* Sing-only presentation. No changes to audio, analysis, or animation cadence. */
+body.singing{background:#101713;color:#e4eee5}
+.singing main{max-width:960px}
+.singing h1{font-size:14px;letter-spacing:1.2px;color:#a3b8a6}
+.singing nav{border-bottom:1px solid #304236;padding-bottom:14px;margin-bottom:0}
+.singing nav button{border-radius:8px;min-width:90px;border-color:#364c3d}
+.singing nav #sing.active{background:#d3edb2;color:#182519;border-color:#d3edb2}
+#call-response{--phase:#bfe79b;position:relative;background:radial-gradient(ellipse at 50% 0%,#233c2c 0%,#17271d 52%,#142018 100%);border:1px solid #38503e;border-radius:22px;padding:30px 24px 22px;margin:16px 0;box-shadow:0 14px 35px #0002}
+#call-response[data-phase=listen]{--phase:#9acfe9}
+#call-response[data-phase=count]{--phase:#e5ce9a}
+#call-response[data-phase=respond]{--phase:#c8eca2}
+#call-response[data-phase=review]{--phase:#b3dfce}
+#call-response>small{display:inline-block;padding:7px 12px;border:1px solid #49604c;border-radius:20px;letter-spacing:2px;font-size:9px;color:#c0d6bf}
+#call-response #call-phase{font-size:clamp(27px,5vw,40px);letter-spacing:3px;font-weight:500;margin:24px 0 10px;color:var(--phase)}
+#call-hint{max-width:540px;margin:0 auto;line-height:1.6;color:#b4c9b5!important}
+.coach-level{margin-top:20px;display:flex;align-items:center;justify-content:center}
+.coach-level label{font-size:11px;color:#acc2ac}
+.coach-level select{background:#102017;border-color:#435e47;border-radius:9px;padding:9px 12px;color:#d9e9d5}
+#coach-path{border:1px solid #314f3a;border-radius:16px;background:linear-gradient(180deg,#0c1911,#13251a);margin-top:24px}
+#coach-feedback{font-size:17px!important;font-weight:450;letter-spacing:.1px;line-height:1.5;padding:4px 12px}
+.call-beat-track{max-width:440px;height:4px;background:#344633}
+#call-beat{background:var(--phase)}
+#call-position{font-variant-numeric:tabular-nums;letter-spacing:2px;color:#a1b89f}
+#call-progress{font-size:14px;min-height:28px;margin:15px 0;color:#c1d4bb}
+.call-actions{gap:8px}
+.call-actions button{font-size:12px;background:#192d20;border-color:#405d45;color:#c5d9c0;min-height:46px;padding:10px 17px}
+.call-actions #call-go{background:#d3edb2;color:#1b2b17;font-weight:600;border-color:#d3edb2;box-shadow:0 3px 0 #8ca874}
+.call-actions #call-go:active{box-shadow:none;transform:translateY(2px)}
+.call-actions button:hover{border-color:#91b380;background:#2b4430}
+.call-actions #call-go:hover{background:#e3f6c9}
+#coach-ready{background:#c8e5bd;color:#1b2b17}
+#call-options{background:#102016;border-color:#344e39;border-radius:12px;margin-top:24px}
+#call-options summary{color:#b9d3b0;font-size:12px;min-height:24px}
+.exercise-controls select{background:#14271a;border-color:#3d5940;border-radius:8px}
+.exercise-controls label{color:#b4c9ad}
+#voice-stage{border-color:#3b6150;border-radius:20px;box-shadow:inset 0 0 0 1px #88bca00d}
+#voice-stage .hud-label{font-size:9px;letter-spacing:2px;color:#8dcab0}
+#take-review{padding:20px;background:#142219;border:1px solid #344c39;border-radius:18px;margin-top:18px}
+#take-review h3{font-size:18px;font-weight:500;color:#d5ebcc;margin-top:0}
+#take-summary{color:#bacfb4!important;line-height:1.7}
+.audit-details,.audit-settings{background:#102016;border-color:#344b37;border-radius:10px}
+.audit-details summary,.audit-settings summary{color:#b4cda9}
+#take-canvas{border:1px solid #2c4636}
+.singing button:focus-visible,.singing select:focus-visible,.singing summary:focus-visible{outline:2px solid #b6df9f;outline-offset:4px}
+@media(max-width:600px){.singing main{padding:16px 12px 24px}.singing nav{grid-template-columns:repeat(3,1fr);gap:7px}.singing nav button{min-width:0}#call-response{padding:22px 12px 16px;border-radius:18px;margin-top:12px}#call-response #call-phase{letter-spacing:2px}.coach-level{display:block}#coach-path{margin-top:18px;border-radius:12px}#coach-feedback{font-size:15px!important;padding:0 4px}.call-actions{display:grid;grid-template-columns:1fr 1fr}.call-actions #call-go{grid-column:1/-1}.call-actions button{width:100%;padding:10px 8px}#take-review{padding:14px}.exercise-controls{gap:10px}}
+@media(prefers-reduced-motion:reduce){.call-actions #call-go:active{transform:none}}
